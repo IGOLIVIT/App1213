@@ -73,11 +73,11 @@ struct SettingsView: View {
                                         .foregroundColor(Color("prim2"))
                                         .font(.system(size: 27, weight: .regular))
                                     
-                                    Text("Rate us")
+                                    Text("Usage Policy")
                                         .foregroundColor(.white)
                                         .font(.system(size: 17, weight: .semibold))
                                     
-                                    Text("Rate")
+                                    Text("Read")
                                         .foregroundColor(.black)
                                         .font(.system(size: 15, weight: .regular))
                                         .padding(7)

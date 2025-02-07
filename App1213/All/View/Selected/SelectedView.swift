@@ -26,6 +26,30 @@ struct SelectedView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, 24)
                 
+                if viewModel.foods.isEmpty {
+                    
+                    VStack(spacing: 15) {
+                        
+                        Image("empty2")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .padding(.horizontal, 60)
+                        
+                        Text("Empty")
+                            .foregroundColor(.black)
+                            .font(.system(size: 24, weight: .semibold))
+                        
+                        Text("You haven't added any selected desserts")
+                            .foregroundColor(.black)
+                            .font(.system(size: 16, weight: .regular))
+                    }
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(RoundedRectangle(cornerRadius: 20).fill(Color("prim2").opacity(0.2)))
+                    .frame(maxHeight: .infinity)
+                    
+                } else {
+                
                 ScrollView(.vertical, showsIndicators: false) {
                     
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], content: {
@@ -52,11 +76,11 @@ struct SelectedView: View {
                                         Image("es")
                                         
                                         Image("es")
-
+                                        
                                         Image("es")
-
+                                        
                                         Image("es")
-
+                                        
                                     }
                                     
                                 } else if index.fRate ?? "" == "2" {
@@ -66,11 +90,11 @@ struct SelectedView: View {
                                         Image("fs")
                                         
                                         Image("fs")
-
+                                        
                                         Image("es")
-
+                                        
                                         Image("es")
-
+                                        
                                         Image("es")
                                         
                                     }
@@ -82,11 +106,11 @@ struct SelectedView: View {
                                         Image("fs")
                                         
                                         Image("fs")
-
+                                        
                                         Image("fs")
-
+                                        
                                         Image("es")
-
+                                        
                                         Image("es")
                                         
                                     }
@@ -98,11 +122,11 @@ struct SelectedView: View {
                                         Image("fs")
                                         
                                         Image("fs")
-
+                                        
                                         Image("fs")
-
+                                        
                                         Image("fs")
-
+                                        
                                         Image("es")
                                         
                                     }
@@ -114,11 +138,11 @@ struct SelectedView: View {
                                         Image("fs")
                                         
                                         Image("fs")
-
+                                        
                                         Image("fs")
-
+                                        
                                         Image("fs")
-
+                                        
                                         Image("fs")
                                     }
                                 }
@@ -136,6 +160,7 @@ struct SelectedView: View {
                         }
                     })
                 }
+            }
             }
             .padding()
         }

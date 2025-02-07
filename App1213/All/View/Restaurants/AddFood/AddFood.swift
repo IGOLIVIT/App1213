@@ -22,7 +22,7 @@ struct AddFood: View {
                 
                 ZStack {
                     
-                    Text("Restaurant")
+                    Text("Food")
                         .foregroundColor(.black)
                         .font(.system(size: 18, weight: .medium))
                     
